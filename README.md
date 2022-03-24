@@ -5,4 +5,5 @@ Student Management Web Application with a Spring Boot Back-end and Angular Front
 Functionality: CRUD
 
 Create:
-![Alt Text](https://media.giphy.com/media/e6TD6R957Q44WaimPM/giphy.gif)
+
+<iframe src="https://giphy.com/embed/hzQCxEiUsKkexmvYH2" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/hzQCxEiUsKkexmvYH2">via GIPHY</a></p>
