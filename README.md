@@ -9,6 +9,7 @@ Create:
 ![Alt Text](https://media.giphy.com/media/hzQCxEiUsKkexmvYH2/giphy.gif)
 
 Read:
+
 ![Alt Text](https://media.giphy.com/media/FXzNvxTl0zb9mqY1xM/giphy.gif)
 
 Update:
@@ -16,4 +17,5 @@ Update:
 ![Alt Text](https://media.giphy.com/media/OdXcKPPJaeG3UbbPRC/giphy.gif)
 
 Delete: 
+
 ![Alt Text](https://media.giphy.com/media/idHBOiRqbtAYj0fVkV/giphy.gif)
