@@ -6,4 +6,14 @@ Functionality: CRUD
 
 Create:
 
-<iframe src="https://giphy.com/embed/hzQCxEiUsKkexmvYH2" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/hzQCxEiUsKkexmvYH2">via GIPHY</a></p>
+![Alt Text](https://media.giphy.com/media/hzQCxEiUsKkexmvYH2/giphy.gif)
+
+Read:
+![Alt Text](https://media.giphy.com/media/FXzNvxTl0zb9mqY1xM/giphy.gif)
+
+Update:
+
+![Alt Text](https://media.giphy.com/media/OdXcKPPJaeG3UbbPRC/giphy.gif)
+
+Delete: 
+![Alt Text](https://media.giphy.com/media/idHBOiRqbtAYj0fVkV/giphy.gif)
