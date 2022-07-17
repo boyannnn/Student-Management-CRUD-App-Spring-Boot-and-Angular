@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS student;
+
+CREATE TABLE student (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(45) NOT NULL,
+    last_name VARCHAR(45) NOT NULL,
+    grade INT NOT NULL);
