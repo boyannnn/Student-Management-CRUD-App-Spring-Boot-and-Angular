@@ -3,6 +3,7 @@ package boyan.springbootstudentcrud.controller;
 import boyan.springbootstudentcrud.exception.ResourceNotFoundException;
 import boyan.springbootstudentcrud.model.Student;
 import boyan.springbootstudentcrud.repository.StudentRepository;
+import boyan.springbootstudentcrud.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,50 +18,34 @@ import java.util.Map;
 public class StudentController {
 
     @Autowired
-    private StudentRepository studentRepository;
+    StudentService studentService;
 
     @GetMapping("/students")
     public List<Student> getAllStudents(){
-        return this.studentRepository.findAll();
+        return studentService.getAllStudents();
     }
 
     @GetMapping("/students/{id}")
     public ResponseEntity<Student> getStudentById(@PathVariable Long id){
-        Student student = studentRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Student with id '"+id+"' does not exist"));
-        return ResponseEntity.ok(student);
+        return studentService.getStudentById(id);
     }
 
     @PostMapping("/students")
     public Student createStudent(@RequestBody Student student){
-        return studentRepository.save(student);
+        return studentService.createStudent(student);
     }
 
     @PutMapping("/students/{id}")
     public ResponseEntity<Student> updateStudent (@PathVariable Long id, @RequestBody Student studentInfo) {
 
-        Student student = studentRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Student with id '" + id + "' does not exist"));
-
-        student.setFirstName(studentInfo.getFirstName());
-        student.setLastName(studentInfo.getLastName());
-        student.setGrade(studentInfo.getGrade());
-
-        Student updatedStudent = studentRepository.save(student);
-        return ResponseEntity.ok(updatedStudent);
+        return studentService.updateStudent(id, studentInfo);
     }
 
     // todo: validate
     @DeleteMapping("/students/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteStudent(@PathVariable Long id){
-        Student student = studentRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Student with id '" + id + "' does not exist"));
 
-        studentRepository.delete(student);
-        Map<String, Boolean> response = new HashMap<>();
-
-        response.put("deleted",Boolean.TRUE);
-        return ResponseEntity.ok(response);
+        return studentService.deleteStudent(id);
 
     }
 
